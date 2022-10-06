@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME|RESTURANT</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/./reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/./stylesukanya.css' %}">
+    
+    
+    <link rel="stylesheet" href="{% static 'css/./component.css' %}">
+    <!-- aos library css  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+     <!-- Add your custom css -->
+  <link rel="stylesheet" href="{% static 'css/./homes.css' %}">
+    </head>
+<body>
+ 
+        
+ <!-- Hero Section -->
+ <section id="hero">
+    <div class="container">
+      <div class="hero__wrapper">
+        <div class="hero__left" data-aos="fade-left">
+          <div class="hero__left__wrapper">
+  
+            <h1 class="hero__heading">DATA--SENT SUCCESSFULLY</h1>
+           
+            <div class="button__wrapper">
+              <a href="{% url 'index' %}" class="btn primary-btn">GO TO HOME</a>
+
+            </div>
+          </div>
+        </div>
+        <div class="hero__right" data-aos="fade-right">
+          <div class="hero__imgWrapper">
+            <img src="{% static 'images/fo1.png' %}" alt="resturant web">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section -->
+  <div id="copyright">
+    <div class="container">
+     <marquee> <p class="copyright__text">
+       FOR  ANY  QUERY  PLEASE  CONTACT  ON  THIS  NUMBER  9683......
+      </p></marquee>
+    </div>
+  </div>
+
+   <!-- aos script -->
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <!-- custom script -->
+   <script src="mains.js"></script>
+ 
+ 
+     
+ </body>
+ </html>
+ 

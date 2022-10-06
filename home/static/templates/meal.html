@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKING |RESTURANT</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/./reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/./stylesukanya.css' %}">
+    
+    
+    <link rel="stylesheet" href="{% static 'css/./component.css' %}">
+    <!-- aos library css  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="{% static 'css/./bookmeal.css' %}">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+  
+</head>
+<body>
+<!--alert message start
+    <div class="alert-success">-->
+       <!-- <span>Message sent! thank you for contacting us.</span>
+    </div>-->
+    <!--<div class="alert-error">
+        <span>Something went wrong! Please try again</span>
+    </div>-->
+    <!--alert message end-->
+    <div class="contact-section">
+      <div class="contact-info">
+          <div> <i class="fa-solid fa-mug-hot"></i>HOT DRINKS,SOFT DRINKS</div>
+          <div> <i class="fa-solid fa-cloud-meatball"></i>HOT AND SPICY </div>
+          <div><i class="fa-solid fa-utensils"></i>HEALTHY FOOD</div>
+          <div><i class="fa-solid fa-drumstick-bite"></i>NON VEGETARIAN</div>
+      </div>
+      <div class="contact-form">
+          <h2>BOOKING MEAL</h2>
+          <form class="bookmeal" action="/bookmeal/" method="post">
+                     {% csrf_token %}
+              <input type="text" name="m_name" min="4" class="text-box" placeholder="Your Name" required>
+              <input type="tel" minlength="10" maxlength="10" name="m_number" class="text-box" placeholder="Your number" required>
+             <!-- <textarea name="message" rows="5" placeholder="Your Message" required></textarea> -->
+              <input type="submit" name="submit" class="send-btn" value="SEND"> 
+             <!-- <a href="index.html"><input type="submit" name="submit" class="index-btn" value="GO TO HOME"> 
+              </a>-->
+              
+                <a href="{% url 'index' %}">
+                <input type="button" class="index-btn" value="GO TO HOME">
+                </a>
+         
+                  <input type name="m_itemname" class="text-box"  placeholder="Your Item Name"required>
+                 
+              
+                
+             
+              
+                <select name="m_quantity" class="text-box" placeholder="number" required>
+                  <option selected disabled>QUANTITY</option>
+                  <option value="small">1</option>
+                  <option value="medium">2</option>
+                  <option value="large">3</option>
+                  <option value="large">4</option>
+                  <option value="large">5</option>
+                  <option value="large">6</option>
+                  <option value="large">7</option>
+                  <option value="large">8</option>
+                  <option value="large">9</option>
+                  <option value="large">10</option>
+                </select>
+              
+              
+                        
+          </form>
+      </div>
+
+  </div>
+ 
+
+    
+</body>
+</html>
